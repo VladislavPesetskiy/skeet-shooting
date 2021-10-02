@@ -16,10 +16,9 @@ namespace GameCore
 
         public void SkeetShoot(Skeet skeet,float chance)
         {
-            if (Random.value >= chance)
+            if (Random.value < chance)
             {
-                m_shootFX.Play();
-                skeet.Destroy();   
+                SkeetShoot(skeet);
             }
         }
     }

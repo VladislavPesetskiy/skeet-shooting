@@ -23,21 +23,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="64fdfac9-8da5-4268-a3c0-61a2fd2ba9c8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/SpawnSkeetButton.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/SpawnSkeetButton.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.skeet-shooting/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.skeet-shooting/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.skeet-shooting/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.skeet-shooting/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Content/Prefabs/Shotgun Variant.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Content/Prefabs/Shotgun Variant.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Content/Prefabs/skeet.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Content/Prefabs/skeet.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GameScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameCore/AimProgressListener.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameCore/AimProgressListener.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameCore/Shooter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameCore/Shooter.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameCore/Skeet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameCore/Skeet.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameCore/SkeetSpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameCore/SkeetSpawner.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameCore/TargetChecker.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameCore/TargetChecker.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/AimProgressBar.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/AimProgressBar.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/ProgressBar.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/ProgressBar.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/DynamicsManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/DynamicsManager.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,14 +58,14 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/GameCore/ProgressListner.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameCore/ProgressLisner.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameCore/ProgressListener.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/AimProgressBar.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/ProgressBar.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/SpawnSkeetButton.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameCore/TargetChecker.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameCore/Skeet.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GameCore/SkeetSpawner.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/ProgressBar.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/AimProgressBar.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameCore/Shooter.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameCore/AimProgressListener.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/GameCore/SkeetSpawner.cs" />
       </list>
     </option>
   </component>
@@ -121,7 +112,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1633168487310</updated>
-      <workItem from="1633168494004" duration="15877000" />
+      <workItem from="1633168494004" duration="16979000" />
     </task>
     <servers />
   </component>
@@ -213,12 +204,29 @@
       <screen x="0" y="25" width="1680" height="967" />
     </state>
     <state width="1638" height="346" key="GridCell.Tab.3.right/0.25.1680.967@0.25.1680.967" timestamp="1633186567864" />
-    <state x="503" y="235" width="672" height="678" key="search.everywhere.popup" timestamp="1633186898077">
+    <state x="503" y="235" width="672" height="678" key="search.everywhere.popup" timestamp="1633189185336">
       <screen x="0" y="25" width="1680" height="967" />
     </state>
-    <state x="503" y="235" width="672" height="678" key="search.everywhere.popup/0.25.1680.967@0.25.1680.967" timestamp="1633186898077" />
+    <state x="503" y="235" width="672" height="678" key="search.everywhere.popup/0.25.1680.967@0.25.1680.967" timestamp="1633189185336" />
   </component>
   <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/GameCore/Shooter.cs</url>
+          <line>20</line>
+          <properties documentPath="$PROJECT_DIR$/Assets/Scripts/GameCore/Shooter.cs" initialLine="20">
+            <startOffsets>
+              <option value="474" />
+            </startOffsets>
+            <endOffsets>
+              <option value="492" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
     <watches-manager>
       <configuration name="UNITY_DEBUG_RUN_CONFIGURATION">
         <watch expression="m_flyCurve.Evaluate(t)" language="C#" />

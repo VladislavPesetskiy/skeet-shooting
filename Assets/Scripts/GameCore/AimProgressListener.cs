@@ -11,6 +11,7 @@ namespace GameCore
         [SerializeField] private Shooter m_shooter = null;
         [SerializeField] private float m_minTimeFillProgress = 0f;
         [SerializeField] private float m_maxTimeFillProgress = 0f;
+        [SerializeField] private float m_progressForRandomShoot = 0.9f;
         
         private float m_timerValue = 0f;
         private float m_maxTimeValue = 0f;
@@ -48,16 +49,18 @@ namespace GameCore
                 ResetTimer();
                 return;
             }
-            if(m_targetChecker.InTargetSkeet.FlyingProgress >= 0.98f)
+            
+            // Random shoot when timer is over
+            if(m_targetChecker.InTargetSkeet.FlyingProgress >= m_progressForRandomShoot)
             {
-                m_shooter.SkeetShoot(m_targetChecker.InTargetSkeet, (m_maxTimeValue - m_timerValue) / m_maxTimeValue);
+                m_shooter.SkeetShoot(m_targetChecker.InTargetSkeet, m_maxTimeValue - m_timerValue);
                 ResetTimer();
                 return;
             }
             
-
             m_timerValue -= Time.deltaTime;
-            m_aimProgressBar.SetProgress(m_maxTimeValue - m_timerValue, m_maxTimeValue);
+            var progress = (m_maxTimeValue - m_timerValue) / m_maxTimeValue;
+            m_aimProgressBar.SetProgress(progress);
             
             if (m_timerValue <= 0)
             {

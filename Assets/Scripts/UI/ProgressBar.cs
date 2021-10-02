@@ -9,9 +9,9 @@ namespace UI
 
         protected float m_progress = 0f;
 
-        public virtual void SetProgress(float currentValue, float maxValue)
+        public virtual void SetProgress(float progress)
         {
-            m_progress = currentValue / maxValue;
+            m_progress = progress;
             m_progressSource.fillAmount = m_progress;
         }
 
