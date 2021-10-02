@@ -37,6 +37,7 @@
           <e p="UI" t="Include">
             <e p="AimProgressBar.cs" t="Include" />
             <e p="ProgressBar.cs" t="Include" />
+            <e p="SpawnSkeetButton.cs" t="Include" />
           </e>
         </e>
         <e p="TextMesh Pro" t="Include">

@@ -14,5 +14,11 @@ namespace UI
             m_progress = currentValue / maxValue;
             m_progressSource.fillAmount = m_progress;
         }
+
+        public virtual void ResetProgress()
+        {
+            m_progress = 0f;
+            m_progressSource.fillAmount = 0f;
+        }
     }
 }

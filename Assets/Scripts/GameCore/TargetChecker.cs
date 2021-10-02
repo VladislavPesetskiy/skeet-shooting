@@ -7,7 +7,7 @@ namespace GameCore
     {
         [SerializeField] private Camera m_mainCamera = null;
         [SerializeField] private LayerMask m_targetLayer = default;
-        [SerializeField] private float m_raycastLength = 100f;
+        //[SerializeField] private float m_raycastLength = 100f;
 
         private bool m_inTarget = false;
         private Skeet m_inTargetSkeet = null;
@@ -16,12 +16,14 @@ namespace GameCore
         public Action<float> EventSkeetIn;
         public Action EventTargetOut;
 
-        private void Update()
+        #region Raycast variation
+
+        /*private void Update()
         {
             CheckTarget();
-        }
-
-        private void CheckTarget()
+        }*/
+        
+        /*private void CheckTarget()
         {
             var cameraTransform = m_mainCamera.transform;
             var from = cameraTransform.position;
@@ -45,9 +47,9 @@ namespace GameCore
                     m_inTargetSkeet = null;
                 }
             }
-        }
+        }*/
 
-        private void OnDrawGizmos()
+        /*private void OnDrawGizmos()
         {
             if(m_mainCamera == null) return;
             
@@ -55,6 +57,31 @@ namespace GameCore
             var cameraTransform = m_mainCamera.transform;
             var cameraPosition = cameraTransform.position;
             Gizmos.DrawLine(cameraPosition, cameraPosition + transform.forward * m_raycastLength);
+        }*/
+
+        #endregion
+
+        public void ResetTarget()
+        {
+            m_inTargetSkeet = null;
+            EventTargetOut?.Invoke();
+        }
+
+        private void OnTriggerEnter(Collider other)
+        {
+            if (other.TryGetComponent(out Skeet skeet))
+            {
+                m_inTargetSkeet = skeet;
+                EventSkeetIn?.Invoke(skeet.FlyingProgress);
+            }
+        }
+        
+        private void OnTriggerExit(Collider other)
+        {
+            if (other.TryGetComponent(out Skeet skeet))
+            {
+                ResetTarget();
+            }
         }
     }
 }
